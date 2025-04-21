@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component xmlns="http://www.opensource-socialnetwork.org/v/3.0">
+    <name>GroupUsername</name>
+    <id>GroupUsername</id>
+    <author>OpenTeknik</author>
+    <description>Group username.</description>
+    <license>OPENTEKNIK LLC, COMMERCIAL LICENSE v1.0</license>
+    <author_url>http://www.openteknik.com/</author_url>
+    <license_url>https://www.openteknik.com/license/commercial-license-v1</license_url>
+    <version>1.0</version>
+	<requires>
+		<type>ossn_version</type>
+		<version>8.1</version>
+	</requires>
+	<requires>
+		<type>ossn_component</type>
+		<name>GroupSlugRouter</name>
+		<comparator>disabled</comparator>
+	</requires>	
+</component>
