@@ -12,9 +12,14 @@ define('__GroupUsername__', ossn_route()->com . 'GroupUsername/');
 function group_username_init() {
 		ossn_extend_view('forms/OssnGroups/edit', 'group_username/js');
 		ossn_register_page('g', function ($pages) {
+				if(empty($pages)){
+					ossn_error_page();
+				}
 				$group = ossn_get_group_by_username($pages[0]);
 				if($group) {
 						redirect("group/{$group->guid}");
+				} else {
+						ossn_error_page();
 				}
 		});
 		if(ossn_isLoggedin()) {
@@ -47,6 +52,9 @@ function group_username_init() {
 		}
 }
 function ossn_get_group_by_username($username) {
+		if(empty($username)){
+			return false;
+		}
 		$group  = new OssnGroup();
 		$search = $group->searchObject(array(
 				'subtype'        => 'ossngroup',
