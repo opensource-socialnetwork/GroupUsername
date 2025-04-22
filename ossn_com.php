@@ -11,6 +11,8 @@
 define('__GroupUsername__', ossn_route()->com . 'GroupUsername/');
 function group_username_init() {
 		ossn_extend_view('forms/OssnGroups/edit', 'group_username/js');
+		ossn_extend_view('groups/pages/profile', 'group_username/profile');
+		
 		ossn_register_page('g', function ($pages) {
 				if(empty($pages)){
 					ossn_error_page();

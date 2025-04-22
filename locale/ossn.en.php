@@ -12,5 +12,6 @@ $en = array(
 	'groupusername' => 'Group Username',
 	'groupusername:startswithalphabet' => 'Username must start with alphabet and only alphanumeric digits allowed!',
 	'groupusername:username:exists' => 'Group with such a username already exists, please use different username!',
+	'groupusername:url' => 'Group URL',
 );
 ossn_register_languages('en', $en); 
